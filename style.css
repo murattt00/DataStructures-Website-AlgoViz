@@ -1,0 +1,1230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #3498db;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+main div{ 
+    margin-top: 2rem;
+}
+
+.category-section {
+    margin-bottom: 3rem;
+    border: 5px dashed #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #e7e0e0;
+}
+.category-section hr{
+    margin: 30px;
+}
+
+.category-section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-family: monospace;
+}
+
+.divider {
+    color: #bdc3c7;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    flex: 1 1 280px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.card hr {
+    border: none;
+    border-top: 2px dashed #bdc3c7;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 1rem;
+    min-height: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 3px solid #3498db;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* ABOUT PAGE STYLES */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.about-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+@media (max-width: 768px) {
+   
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* STACK VISUALIZATION STYLES */
+.visualization-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+}
+
+.control-panel {
+    background: white;
+    padding: 2rem;
+    border-right: 2px solid #e0e0e0;
+    flex: 1;
+    min-width: 400px;
+}
+
+.control-panel h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #3498db;
+}
+
+.btn-push {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-push:hover {
+    background-color: #229954;
+}
+
+.btn-pop {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-pop:hover {
+    background-color: #c0392b;
+}
+
+.btn-peek {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-peek:hover {
+    background-color: #d68910;
+}
+
+.btn-clear {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-clear:hover {
+    background-color: #7f8c8d;
+}
+
+.info-box {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.info-box strong {
+    color: #2c3e50;
+}
+
+#statusMessage {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Stack Display */
+.stack-display {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.stack-display h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.stack-container {
+    width: 100%;
+    max-width: 300px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #bdc3c7;
+}
+
+.stack-empty {
+    text-align: center;
+    color: #95a5a6;
+    padding: 2rem;
+    font-style: italic;
+}
+
+.stack-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.stack-item.top-item {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: 2px solid #e74c3c;
+}
+
+.item-value {
+    font-size: 1.2rem;
+}
+
+.top-label {
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stack-base {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background: #2c3e50;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Explanation Section */
+.explanation-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.explanation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.explanation-grid .explanation-card {
+    flex: 1 1 250px;
+}
+
+.explanation-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.explanation-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.explanation-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive for Stack Page */
+@media (max-width: 768px) {
+    .visualization-container {
+        flex-direction: column;
+    }
+    
+    .control-panel {
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+        min-width: 100%;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .explanation-grid {
+        flex-direction: column;
+    }
+
+    .explanation-grid .explanation-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* QUEUE VISUALIZATION STYLES */
+/* Queue kullanır çoğu stack stilini ama yatay düzen için özel stiller */
+
+.queue-display {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.queue-display h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.queue-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.front-label {
+    color: #e74c3c;
+}
+
+.rear-label {
+    color: #27ae60;
+}
+
+.queue-container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #bdc3c7;
+    overflow-x: auto;
+}
+
+.queue-empty {
+    text-align: center;
+    color: #95a5a6;
+    padding: 2rem;
+    font-style: italic;
+    width: 100%;
+}
+
+.queue-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    animation: slideInQueue 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-item.front-item {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: 2px solid #e74c3c;
+}
+
+.queue-item.rear-item {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border: 2px solid #27ae60;
+}
+
+.item-value {
+    font-size: 1.2rem;
+}
+
+@keyframes slideInQueue {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* AVL TREE VISUALIZATION STYLES */
+.avl-display {
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    flex: 1;
+}
+
+.avl-display h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.tree-container {
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    position: relative;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #bdc3c7;
+    padding: 1rem;
+    overflow: visible;
+}
+
+.tree-empty {
+    text-align: center;
+    color: #95a5a6;
+    padding: 3rem;
+    font-style: italic;
+}
+
+.tree-node {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    animation: nodeAppear 0.5s ease;
+    z-index: 10;
+}
+
+.node-value {
+    font-size: 1rem;
+}
+
+.node-balance {
+    font-size: 0.65rem;
+    margin-top: 2px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.node-balance.balanced {
+    color: #d4edda;
+}
+
+.node-balance.unbalanced {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.tree-line {
+    position: absolute;
+    height: 2px;
+    background: #95a5a6;
+    z-index: 1;
+}
+
+@keyframes nodeAppear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Visual Step Highlighting for AVL Tree */
+.tree-node.visiting {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    animation: pulse 0.8s ease-in-out;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(245, 87, 108, 0.6);
+}
+
+.tree-node.comparing {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    animation: pulse 0.8s ease-in-out;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.6);
+}
+
+.tree-node.new-node {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    animation: bounceIn 0.8s ease-out;
+    transform: scale(1.2);
+    box-shadow: 0 6px 16px rgba(67, 233, 123, 0.7);
+}
+
+.tree-node.rotating {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    animation: rotate360 1s ease-in-out;
+    box-shadow: 0 6px 16px rgba(250, 112, 154, 0.7);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.15);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+/* Responsive for AVL Tree */
+@media (max-width: 768px) {
+    .tree-container {
+        min-height: 300px;
+    }
+    
+    .tree-node {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .node-value {
+        font-size: 0.9rem;
+    }
+}
+
+/* BST NODE STYLE - Simpler than AVL (no balance factor) */
+.bst-node {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+/* TYPE SELECTOR SECTION */
+.type-selector {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.type-selector h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.type-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.type-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #3498db;
+    background: white;
+    color: #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-btn:hover {
+    background: #ecf0f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.type-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+/* LINKED LIST VISUALIZATION */
+.linked-list-container {
+    width: 100%;
+    min-height: 150px;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.list-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: max-content;
+    padding: 1rem;
+}
+
+.list-wrapper.circular-wrapper {
+    position: relative;
+}
+
+.list-label {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+.list-node {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    animation: nodeAppear 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.list-node.doubly-node {
+    padding: 1rem 0.5rem;
+}
+
+/* Visual highlighting for linked list nodes */
+.list-node.visiting {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(245, 87, 108, 0.6);
+    animation: pulse 0.8s ease-in-out;
+}
+
+.list-node.comparing {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.6);
+    animation: pulse 0.8s ease-in-out;
+}
+
+.list-node.new-node {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    transform: scale(1.2);
+    box-shadow: 0 6px 16px rgba(67, 233, 123, 0.7);
+    animation: bounceIn 0.8s ease-out;
+}
+
+.node-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.node-pointer {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.node-pointer.prev-pointer {
+    margin-right: 0.5rem;
+}
+
+.node-pointer.next-pointer {
+    margin-left: 0.5rem;
+}
+
+.list-arrow {
+    font-size: 1.5rem;
+    color: #95a5a6;
+    font-weight: bold;
+}
+
+.list-arrow.bidirectional {
+    color: #3498db;
+    font-size: 1.8rem;
+}
+
+.list-null {
+    padding: 0.5rem 1rem;
+    background: #ecf0f1;
+    color: #7f8c8d;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px dashed #bdc3c7;
+}
+
+.list-empty {
+    text-align: center;
+    color: #95a5a6;
+    padding: 3rem;
+    font-style: italic;
+}
+
+.circular-indicator {
+    padding: 0.5rem 1rem;
+    background: #e8f5e9;
+    color: #2ecc71;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #2ecc71;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive for Linked List */
+@media (max-width: 768px) {
+    .list-node {
+        padding: 0.8rem;
+    }
+    
+    .node-value {
+        font-size: 1rem;
+        min-width: 30px;
+    }
+    
+    .type-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* BUBBLE SORT VISUALIZATION */
+.bubble-sort-container {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.sort-empty {
+    text-align: center;
+    color: #95a5a6;
+    padding: 3rem;
+    font-style: italic;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-bar {
+    flex: 1;
+    min-width: 40px;
+    max-width: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bar-value {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bar-index {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin-top: auto;
+    padding-bottom: 0.5rem;
+}
+
+/* Animation states for sorting */
+.sort-bar.comparing {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 6px 16px rgba(79, 172, 254, 0.6);
+    animation: pulse 0.5s ease-in-out;
+}
+
+.sort-bar.swapping {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    transform: scale(1.15) translateY(-15px);
+    box-shadow: 0 8px 20px rgba(245, 87, 108, 0.7);
+    animation: shake 0.5s ease-in-out;
+}
+
+.sort-bar.sorted {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 4px 12px rgba(67, 233, 123, 0.6);
+}
+
+/* Additional animation states for Quick Sort and Merge Sort */
+.sort-bar.pivot {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    transform: scale(1.2) translateY(-20px);
+    box-shadow: 0 8px 24px rgba(250, 112, 154, 0.8);
+    animation: pulse 0.6s ease-in-out;
+}
+
+.sort-bar.dividing {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 4px 12px rgba(161, 140, 209, 0.6);
+}
+
+.sort-bar.merging {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    transform: scale(1.08) translateY(-8px);
+    box-shadow: 0 5px 14px rgba(252, 182, 159, 0.7);
+    animation: pulse 0.5s ease-in-out;
+}
+
+.sort-bar.merged {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(161, 196, 253, 0.6);
+}
+
+/* Animation states for Search Algorithms */
+.sort-bar.checked {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    opacity: 0.6;
+    transform: scale(0.95);
+}
+
+.sort-bar.searching {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+}
+
+.sort-bar.eliminated {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+    opacity: 0.4;
+    transform: scale(0.9);
+}
+
+/* Animation states for Selection Sort */
+.sort-bar.current-position,
+.bar.current-position {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.7);
+}
+
+.sort-bar.minimum,
+.bar.minimum {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    transform: scale(1.15) translateY(-15px);
+    box-shadow: 0 6px 18px rgba(255, 216, 155, 0.7);
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+/* Animation states for Insertion Sort */
+.sort-bar.inserting,
+.bar.inserting {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    transform: scale(1.15) translateY(-15px);
+    box-shadow: 0 6px 18px rgba(252, 182, 159, 0.7);
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: scale(1.15) translateX(0) translateY(-15px);
+    }
+    25% {
+        transform: scale(1.15) translateX(-5px) translateY(-15px);
+    }
+    75% {
+        transform: scale(1.15) translateX(5px) translateY(-15px);
+    }
+}
+
+/* Speed control styling */
+#speedControl {
+    width: 200px;
+    margin: 0 1rem;
+}
+
+#speedValue {
+    color: #667eea;
+    font-weight: bold;
+    min-width: 60px;
+    display: inline-block;
+}
+
+/* Responsive for Bubble Sort */
+@media (max-width: 768px) {
+    .sort-bar {
+        min-width: 30px;
+        max-width: 60px;
+    }
+    
+    .bar-value {
+        font-size: 0.9rem;
+    }
+    
+    .bubble-sort-container {
+        min-height: 300px;
+        padding: 1rem;
+    }
+}

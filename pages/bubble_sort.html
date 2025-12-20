@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Bubble Sort Visualization</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>BUBBLE SORT VISUALIZATION</h1>
+        <p class="tagline">"Simple Comparison-Based Sorting Algorithm"</p>
+    </header>
+
+    <main>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How Bubble Sort Works</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>🔄 Compare & Swap</h3>
+                    <p>Repeatedly compares adjacent elements and swaps them if they are in wrong order.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>📊 Multiple Passes</h3>
+                    <p>Each pass moves the largest unsorted element to its correct position at the end.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>⏱️ Time Complexity</h3>
+                    <p>Best: O(n) when already sorted. Average & Worst: O(n²) - suitable for small datasets.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>✅ Stable Sort</h3>
+                    <p>Maintains the relative order of equal elements. Simple to understand and implement.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>🔢 Bubble Sort Controls</h2>
+                <div class="controls">
+                    <input type="text" id="arrayInput" placeholder="Enter numbers (e.g., 5,3,8,1,9)"
+                        class="input-field">
+                    <button onclick="generateRandom()" class="btn-push">Random Array</button>
+                    <button onclick="setArray()" class="btn-peek">Set Array</button>
+                    <button onclick="startSort()" class="btn-push">Start Sort</button>
+                    <button onclick="pauseSort()" id="pauseBtn" class="btn-peek" style="display:none;">Pause</button>
+                    <button onclick="resumeSort()" id="resumeBtn" class="btn-push" style="display:none;">Resume</button>
+                    <button onclick="resetArray()" class="btn-clear">Reset</button>
+                </div>
+                <div class="controls">
+                    <label for="speedControl">Animation Speed:</label>
+                    <input type="range" id="speedControl" min="100" max="2000" value="800" step="100">
+                    <span id="speedValue">800ms</span>
+                </div>
+                <div class="info-box">
+                    <p><strong>Array Size:</strong> <span id="arraySize">0</span></p>
+                    <p><strong>Comparisons:</strong> <span id="comparisons">0</span></p>
+                    <p><strong>Swaps:</strong> <span id="swaps">0</span></p>
+                    <p><strong>Current Pass:</strong> <span id="currentPass">0</span></p>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+
+            <!-- Bubble Sort Visualization -->
+            <div class="queue-display">
+                <h3>Array Visualization</h3>
+                <div class="bubble-sort-container" id="sortContainer">
+                    <div class="sort-empty">Enter an array to visualize bubble sort</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/bubble_sort.js"></script>
+</body>
+
+</html>

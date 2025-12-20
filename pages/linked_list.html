@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Linked List Visualization</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>LINKED LIST VISUALIZATION</h1>
+        <p class="tagline">"Dynamic Sequential Data Structure"</p>
+    </header>
+
+    <main>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How Linked Lists Work</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>🔗 Singly Linked List</h3>
+                    <p>Each node has a value and pointer to the next node. Traversal is one-way only.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>⇄ Doubly Linked List</h3>
+                    <p>Each node has pointers to both next and previous nodes. Allows bidirectional traversal.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🔄 Circular Linked List</h3>
+                    <p>Last node points back to the first node, creating a circular structure.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>➕ Operations</h3>
+                    <p>Insert at head/tail, delete by value/position, search for values in the list.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Type Selector -->
+        <div class="type-selector">
+            <h2>Select List Type</h2>
+            <div class="type-buttons">
+                <button onclick="changeListType('singly')" id="btnSingly" class="type-btn active">Singly</button>
+                <button onclick="changeListType('doubly')" id="btnDoubly" class="type-btn">Doubly</button>
+                <button onclick="changeListType('circular')" id="btnCircular" class="type-btn">Circular</button>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>🔗 Linked List Operations</h2>
+                <div class="controls">
+                    <input type="number" id="listInput" placeholder="Enter value..." class="input-field">
+                    <button onclick="insertAtHead()" class="btn-push">Insert at Head</button>
+                    <button onclick="insertAtTail()" class="btn-push">Insert at Tail</button>
+                    <button onclick="deleteByValue()" class="btn-pop">Delete by Value</button>
+                    <button onclick="search()" class="btn-peek">Search</button>
+                    <button onclick="clearList()" class="btn-clear">Clear</button>
+                </div>
+                <div class="info-box">
+                    <p><strong>List Type:</strong> <span id="listType">Singly Linked List</span></p>
+                    <p><strong>Node Count:</strong> <span id="nodeCount">0</span></p>
+                    <p><strong>Search Result:</strong> <span id="searchResult">None</span></p>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+
+            <!-- Linked List Visualization -->
+            <div class="queue-display">
+                <h3>List Structure</h3>
+                <div class="linked-list-container" id="listContainer">
+                    <div class="list-empty">List is empty</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/linked_list.js"></script>
+</body>
+
+</html>

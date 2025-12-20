@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Master Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>AVL TREE VISUALIZATION</h1>
+        <p class="tagline">"Self-Balancing Binary Search Tree"</p>
+    </header>
+
+    <main>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How AVL Tree Works</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>➕ Insert Operation</h3>
+                    <p>Adds a new node following BST rules, then performs rotations if needed to maintain balance.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>➖ Delete Operation</h3>
+                    <p>Removes a node and rebalances the tree using rotations to maintain AVL properties.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🔄 Rotations</h3>
+                    <p>Left, Right, Left-Right, and Right-Left rotations maintain tree balance (height difference ≤ 1).
+                    </p>
+                </div>
+                <div class="explanation-card">
+                    <h3>⚖️ Balance Factor</h3>
+                    <p>Height difference between left and right subtrees. Must be -1, 0, or 1 for all nodes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>🌳 AVL Tree Operations</h2>
+                <div class="controls">
+                    <input type="number" id="avlInput" placeholder="Enter value..." class="input-field">
+                    <button onclick="insert()" class="btn-push">Insert</button>
+                    <button onclick="deleteNode()" class="btn-pop">Delete</button>
+                    <button onclick="pauseOperation()" id="pauseBtn" class="btn-peek"
+                        style="display:none;">Pause</button>
+                    <button onclick="resumeOperation()" id="resumeBtn" class="btn-push"
+                        style="display:none;">Resume</button>
+                    <button onclick="clearTree()" class="btn-clear">Clear</button>
+                </div>
+                <div class="info-box">
+                    <p><strong>Tree Height:</strong> <span id="treeHeight">0</span></p>
+                    <p><strong>Node Count:</strong> <span id="nodeCount">0</span></p>
+                    <p><strong>Last Operation:</strong> <span id="lastOperation">None</span></p>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+
+            <!-- AVL Tree Visualization -->
+            <div class="avl-display">
+                <h3>AVL Tree Structure</h3>
+                <div class="tree-container" id="treeContainer">
+                    <div class="tree-empty">Tree is empty</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/avl_trees.js"></script>
+</body>
+
+</html>

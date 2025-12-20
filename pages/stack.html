@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Master Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>STACK VISUALIZATION</h1>
+        <p class="tagline">"LIFO - Last In, First Out"</p>
+    </header>
+
+    <main>
+         <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How Stack Works</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>🔼 Push Operation</h3>
+                    <p>Adds a new element to the top of the stack. The new element becomes the top.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🔽 Pop Operation</h3>
+                    <p>Removes and returns the top element from the stack. The element below becomes the new top.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>👁️ Peek Operation</h3>
+                    <p>Returns the top element without removing it. Useful for viewing the top element.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>📏 LIFO Principle</h3>
+                    <p>Last In, First Out - The most recently added element is removed first.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>📚 Stack Operations</h2>
+                <div class="controls">
+                    <input type="text" id="stackInput" placeholder="Enter element..." class="input-field">
+                    <button onclick="push()" class="btn-push">Push</button>
+                    <button onclick="pop()" class="btn-pop">Pop</button>
+                    <button onclick="peek()" class="btn-peek">Peek</button>
+                    <button onclick="clearStack()" class="btn-clear">Clear</button>
+                </div>
+                <div class="info-box">
+                    <p><strong>Stack Size:</strong> <span id="stackSize">0</span></p>
+                    <p><strong>Top Element:</strong> <span id="topElement">None</span></p>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+
+            <!-- Stack Visualization -->
+            <div class="stack-display">
+                <h3>Stack Structure</h3>
+                <div class="stack-container" id="stackContainer">
+                    <div class="stack-empty">Stack is empty</div>
+                </div>
+                <div class="stack-base">BASE</div>
+            </div>
+        </div>
+        
+    </main>
+   
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/stack.js"></script>
+</body>
+
+</html>

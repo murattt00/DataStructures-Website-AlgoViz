@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Master Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>QUEUE VISUALIZATION</h1>
+        <p class="tagline">"FIFO - First In, First Out"</p>
+    </header>
+
+    <main>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How Queue Works</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>➕ Enqueue Operation</h3>
+                    <p>Adds a new element to the rear (back) of the queue. New elements join at the end.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>➖ Dequeue Operation</h3>
+                    <p>Removes and returns the front element from the queue. The next element becomes the new front.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>👁️ Peek Operation</h3>
+                    <p>Returns the front element without removing it. Useful for viewing the next element to be served.
+                    </p>
+                </div>
+                <div class="explanation-card">
+                    <h3>📏 FIFO Principle</h3>
+                    <p>First In, First Out - The oldest element (first added) is removed first, like a real queue.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>🎫 Queue Operations</h2>
+                <div class="controls">
+                    <input type="text" id="queueInput" placeholder="Enter element..." class="input-field">
+                    <button onclick="enqueue()" class="btn-push">Enqueue</button>
+                    <button onclick="dequeue()" class="btn-pop">Dequeue</button>
+                    <button onclick="peek()" class="btn-peek">Peek</button>
+                    <button onclick="clearQueue()" class="btn-clear">Clear</button>
+                </div>
+                <div class="info-box">
+                    <p><strong>Queue Size:</strong> <span id="queueSize">0</span></p>
+                    <p><strong>Front Element:</strong> <span id="frontElement">None</span></p>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+
+            <!-- Queue Visualization -->
+            <div class="queue-display">
+                <h3>Queue Structure</h3>
+                <div class="queue-labels">
+                    <span class="front-label">FRONT →</span>
+                    <span class="rear-label">← REAR</span>
+                </div>
+                <div class="queue-container" id="queueContainer">
+                    <div class="queue-empty">Queue is empty</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/queue.js"></script>
+</body>
+
+</html>

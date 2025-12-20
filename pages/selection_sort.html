@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoViz - Selection Sort Visualization</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AlgoViz</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>SELECTION SORT VISUALIZATION</h1>
+        <p class="tagline">"Find the minimum, place it at the start."</p>
+    </header>
+
+    <main>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <h2>How Selection Sort Works</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <h3>🔍 Find Minimum</h3>
+                    <p>Repeatedly finds the minimum element from the unsorted portion of the array.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>🔄 Place at Start</h3>
+                    <p>Swaps the minimum element with the first unsorted position in each pass.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>⏱️ Time Complexity</h3>
+                    <p>Always O(n²) for best, average, and worst cases - not adaptive to input.</p>
+                </div>
+                <div class="explanation-card">
+                    <h3>❌ Not Stable</h3>
+                    <p>May change relative order of equal elements. Simple but inefficient for large datasets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <h2>🔢 Selection Sort Controls</h2>
+                <div class="controls">
+                    <input type="text" id="arrayInput" placeholder="Enter numbers (e.g., 5,3,8,1,9)"
+                        class="input-field">
+                    <button onclick="generateRandomArray()" class="btn-push">Random Array</button>
+                    <button onclick="startSort()" class="btn-push">Start Sort</button>
+                    <button onclick="pauseSort()" id="pauseBtn" class="btn-peek" style="display:none;">Pause</button>
+                    <button onclick="resumeSort()" id="resumeBtn" class="btn-push" style="display:none;">Resume</button>
+                    <button onclick="resetSort()" class="btn-clear">Reset</button>
+                </div>
+                <div class="controls">
+                    <label for="speedControl">Animation Speed:</label>
+                    <input type="range" id="speedControl" min="100" max="2000" value="800" step="100">
+                    <span id="speedValue">800ms</span>
+                </div>
+                <div class="info-box">
+                    <p><strong>Comparisons:</strong> <span id="comparisons">0</span></p>
+                    <p><strong>Swaps:</strong> <span id="swaps">0</span></p>
+                    <p><strong>Current Pass:</strong> <span id="pass">0</span></p>
+                </div>
+                <div id="message" class="message" style="display:none;"></div>
+            </div>
+
+            <!-- Selection Sort Visualization -->
+            <div class="queue-display">
+                <h3>Array Visualization</h3>
+                <div id="arrayContainer" class="bubble-sort-container">
+                    <div class="sort-empty">Enter an array to visualize selection sort</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2025 AlgoViz - Designed for Computer Engineering Students</p>
+    </footer>
+
+    <script src="../js/selection_sort.js"></script>
+</body>
+
+</html>
